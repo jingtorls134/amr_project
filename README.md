@@ -11,7 +11,7 @@ Principal Component Analysis (PCA) was performed to reduce the dimensionality of
 
 ![PCA Projection](pca_result.png)
 - The PCA scatter plot shows the separation of antibiotic resistance profiles between samples from **hospitals (blue)** and **lakes (orange)**.
-- There is **some overlap**, indicating shared resistance patterns, but distinct clustering suggests notable differences in resistance characteristics.
+- There are **some overlap**, indicating shared resistance patterns, but distinct clustering suggests notable differences in resistance characteristics.
 
 ### t-SNE Projection
 t-SNE was used for non-linear dimensionality reduction to better visualize clusters in the data.
