@@ -9,19 +9,19 @@ This repository contains the analysis of antibiotic resistance data using variou
 ### PCA of Antibiotic Resistance Data
 Principal Component Analysis (PCA) was performed to reduce the dimensionality of the dataset while preserving variance. The scatter plot below shows how the samples (hospitals and lakes) are distributed along the principal components.
 
-![PCA Projection](pca_result)
+![PCA Projection](pca_result.png)
 
 ### t-SNE Projection
 t-SNE was used for non-linear dimensionality reduction to better visualize clusters in the data.
 
-![t-SNE Projection](t-SNE_result)
+![t-SNE Projection](t-SNE_result.png)
 
 ---
 
 ## 2. Network Analysis: Bacterial Transmission
 A bipartite network graph was created to illustrate the connections between different sources (hospitals, lakes) and the resistant bacterial species.
 
-![Bipartite Graph](network)
+![Bipartite Graph](network.png)
 
 ### Interpretation:
 - Nodes represent either a **bacterial species** or a **source** (hospital/lake).
