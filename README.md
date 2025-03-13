@@ -8,16 +8,18 @@ This repository contains the analysis of antibiotic resistance data using variou
 
 ### PCA of Antibiotic Resistance Data
 Principal Component Analysis (PCA) was performed to reduce the dimensionality of the dataset while preserving variance. The scatter plot below shows how the samples (hospitals and lakes) are distributed along the principal components.
-- **PCA (Principal Component Analysis)**
-  - The PCA scatter plot shows the separation of antibiotic resistance profiles between samples from **hospitals (blue)** and **lakes (orange)**.
-  - There is **some overlap**, indicating shared resistance patterns, but distinct clustering suggests notable differences in resistance characteristics.
 
 ![PCA Projection](pca_result.png)
+- The PCA scatter plot shows the separation of antibiotic resistance profiles between samples from **hospitals (blue)** and **lakes (orange)**.
+- There is **some overlap**, indicating shared resistance patterns, but distinct clustering suggests notable differences in resistance characteristics.
 
 ### t-SNE Projection
 t-SNE was used for non-linear dimensionality reduction to better visualize clusters in the data.
 
 ![t-SNE Projection](t-SNE_result.png)
+- The t-SNE scatter plot shows a more spread-out clustering pattern.
+- This suggests that **nonlinear relationships** may exist between antibiotic resistance features, which PCA (a linear method) cannot fully capture.
+- The **hospital and lake samples still form distinguishable clusters**, supporting the idea of source-dependent variations in resistance.
 
 ---
 
