@@ -1,30 +1,46 @@
-# **AMR Project: Analyzing Bacterial Transmission and Antimicrobial Resistance**
+# AMR Project: Antibiotic Resistance Data Analysis
 
-## **Overview**
-This project analyzes bacterial transmission pathways and antimicrobial resistance (AMR) patterns across multiple sources, including hospitals, lakes, fish, and drinking water. Using **Principal Component Analysis (PCA)**, **ANOVA**, **clustering methods**, and **network analysis**, we identify significant patterns in bacterial transmission and predict potential links between bacterial species.
+This repository contains the analysis of antibiotic resistance data using various computational techniques, including **Principal Component Analysis (PCA)**, **t-Distributed Stochastic Neighbor Embedding (t-SNE)**, **network analysis**, and **statistical hypothesis testing**.
 
-## **Methodology**
-The analysis follows these key steps:
+## 1. Data Visualization and Dimensionality Reduction
 
-1. **Data Collection**: Aggregating bacterial data from hospitals, lakes, fish, and drinking water.
-2. **Data Preprocessing**:
-   - Standardization of Minimum Inhibitory Concentration (MIC) values.
-   - Handling missing values and categorical encoding.
-3. **Principal Component Analysis (PCA)**:
-   - Reducing dimensionality to identify significant patterns.
-4. **ANOVA (Analysis of Variance)**:
-   - Comparing bacterial resistance levels across multiple sources.
-5. **Clustering Analysis**:
-   - Applying **K-means** or **Hierarchical Clustering** to group bacteria with similar transmission pathways.
-6. **Network Analysis**:
-   - Constructing a bacterial transmission network.
-   - Applying **link prediction algorithms** (e.g., Adamic-Adar) to predict potential transmission routes.
+### PCA of Antibiotic Resistance Data
+Principal Component Analysis (PCA) was performed to reduce the dimensionality of the dataset while preserving variance. The scatter plot below shows how the samples (hospitals and lakes) are distributed along the principal components.
 
-## **Installation**
-To set up and run the project locally, follow these steps:
+![PCA Projection](image.png)
 
-### **Requirements**
-Ensure you have **Python 3.8+** and the following libraries installed:
+### t-SNE Projection
+t-SNE was used for non-linear dimensionality reduction to better visualize clusters in the data.
 
-```bash
-pip install numpy pandas scikit-learn networkx matplotlib seaborn scipy
+![t-SNE Projection](image.png)
+
+## 2. Network Analysis: Bacterial Transmission
+A bipartite network graph was created to illustrate the connections between different sources (hospitals, lakes) and the resistant bacterial species.
+
+![Bipartite Graph](image.png)
+
+### Network Link Prediction
+Network link prediction methods were explored to infer potential bacterial transmission pathways between sources.
+
+## 3. Statistical Analysis: t-Test Results
+A **t-test** was conducted to determine significant differences in antibiotic resistance levels between sources. The following antibiotics showed statistically significant differences in resistance levels:
+
+| Antibiotic | t-statistic | p-value  |
+|------------|------------|----------|
+| AMP        | 2.579181   | 0.011566 |
+| CFX        | 4.313463   | 0.000042 |
+| CFL        | 3.218768   | 0.001834 |
+| CFP        | 2.703055   | 0.009590 |
+| CFA        | 2.816276   | 0.007583 |
+| CFO        | 2.014534   | 0.047949 |
+| CFI        | 2.715967   | 0.008626 |
+| NIT        | 2.285750   | 0.025315 |
+
+Antibiotics with **p-value < 0.05** indicate statistically significant differences.
+
+---
+
+## How to Use
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/jingtorls134/amr_project.git
