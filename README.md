@@ -29,11 +29,43 @@ A bipartite network graph was created to illustrate the connections between diff
 ![Bipartite Graph](network.png)
 
 ### Interpretation:
-- Nodes represent either a **bacterial species** or a **source** (hospital/lake).
-- Edges represent detected resistance interactions.
-- The size of the nodes reflects the frequency of occurrence.
+This bipartite network graph represents the relationship between **sources** (e.g., "Lake" and "APMC") and **resistant bacterial species**. The nodes are divided into two distinct sets:
+- **Sources (Lake, APMC)**
+- **Bacterial species (A, B, C, D, E, F, G, H)**
 
-Network link prediction methods were explored to infer potential bacterial transmission pathways between sources.
+Edges between nodes indicate the presence of antibiotic-resistant bacteria in a specific source, with **edge weights representing connection strength** (e.g., frequency of occurrence).
+
+## Key Observations
+1. **Central Nodes:**
+   - The **APMC source** has multiple connections to different bacteria, indicating a **high diversity of resistant strains**.
+   - **Lake is also a major hub**, showing resistance from several bacterial species.
+
+2. **Highly Connected Bacteria:**
+   - **Escherichia coli (E)** is **strongly linked to both Lake and APMC**, suggesting that this species is prevalent in both sources.
+   - **Klebsiella pneumoniae (B)** and **Enterobacter cloacae complex (F)** also have multiple connections.
+
+3. **Source-Specific Bacteria:**
+   - **Acinetobacter baumannii complex (C)** appears to be more associated with **APMC**, potentially indicating a **hospital-acquired resistance pattern**.
+   - **Salmonella enterica spp diarizonae (G)** and **Enterobacter aerogenes (H)** are primarily linked to **Lake**, which may be due to **environmental contamination**.
+
+4. **Edge Weights and Strength of Association:**
+   - The numbers on the edges indicate the **frequency of resistance detection**.
+   - **APMC has a strong connection (weight = 17) with Escherichia coli**, suggesting **frequent resistance in clinical settings**.
+   - **Lake has a notable connection (weight = 16) with Escherichia coli**, highlighting the **spread of resistance beyond hospitals into natural environments**.
+
+## Interpretation
+- **Hospital and environmental sources share common resistant bacteria**, suggesting **potential horizontal gene transfer**.
+- **Certain bacteria are more source-specific**, possibly due to differences in **antibiotic exposure and selective pressures**.
+- **Stronger connections (higher edge weights) indicate bacterial species that are of high concern** in terms of resistance prevalence.
+
+## Next Steps
+- **Community detection analysis** to identify resistance clusters.
+- **Temporal studies** to track resistance evolution over time.
+- **Metagenomic analysis** to confirm genetic similarities between hospital and environmental bacteria.
+
+---
+This bipartite network analysis highlights the interconnectedness of antibiotic-resistant bacteria across different sources, emphasizing the need for **integrated monitoring and control strategies**.
+
 
 ---
 
