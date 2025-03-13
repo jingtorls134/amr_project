@@ -58,11 +58,6 @@ Edges between nodes indicate the presence of antibiotic-resistant bacteria in a 
 - **Certain bacteria are more source-specific**, possibly due to differences in **antibiotic exposure and selective pressures**.
 - **Stronger connections (higher edge weights) indicate bacterial species that are of high concern** in terms of resistance prevalence.
 
-## Next Steps
-- **Community detection analysis** to identify resistance clusters.
-- **Temporal studies** to track resistance evolution over time.
-- **Metagenomic analysis** to confirm genetic similarities between hospital and environmental bacteria.
-
 ---
 This bipartite network analysis highlights the interconnectedness of antibiotic-resistant bacteria across different sources, emphasizing the need for **integrated monitoring and control strategies**.
 
